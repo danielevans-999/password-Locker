@@ -69,26 +69,32 @@ def main():
             
             # Checking whether the inputted password is the same as the confirmed password
             
-            while my_password != confirmed_password:
+            if my_password != confirmed_password:
                 print('Oops seem that the password did not match') 
                 my_password = input()
                 print('Confirm your password')
                 confirmed_password = input()
-        else:
-            print('You have succesfully created a new account')
-            print('\n')
-            print('Log in to your Account')
-            print('Username')
-            log_name = input()
-            print('password')
-            log_password = input()
+            else:
+                print('You have succesfully created a new account')
+                print('\n')
+                print('Log in to your Account')
+                print('Username')
+                log_name = input()
+                print('password')
+                log_password = input()
             
             # checking whether the inpputted details correspond to the sign up details
             
-            while log_name != my_User_name or log_password != my_password:
+            if log_name != my_User_name or log_password != my_password:
                  print('Wrong username or password')
                  print("Username")
                  log_name = input()
                  print("Your Password")
                  log_password = input()
+                 
+            else:
+                print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
+                print('\n')
+            
+                     
                      
