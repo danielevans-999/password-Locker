@@ -134,7 +134,28 @@ def main():
                                 print("Invalid choice use y or n")         
                     elif selected == '1':
                         while True:
-                            print               
+                            print('This is the list of all your credentials ')  
+                            if display_credential():
+                                
+                                for creds in display_credential():
+                                    print(f"ACCOUNT NAME:{creds.account_name}") 
+                                    print(f"PASSWORD:{creds.account_password}")   
+                            else:
+                                print('\n')
+                                print("You don't seem to have any credentials yet")
+                                print('\n')
+                                
+                                print('Do you want to go back or continue? y/n')
+                                menu = input().lower()
+                                if menu == 'y':
+                                    break
+                                elif menu == 'n':
+                                    continue
+                                else:
+                                    print('invalid choice')
+                                    continue
+                    elif            
+                                                  
                                       
                     
                     
