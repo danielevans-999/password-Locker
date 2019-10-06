@@ -24,3 +24,8 @@ class Credential:
     
     credentials_list = []
     
+    
+    def __init__(self,account_name,acount_password):
+        self.account_name = account_name
+        self.account_password = acount_password 
+    
