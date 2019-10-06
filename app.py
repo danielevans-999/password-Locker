@@ -58,7 +58,7 @@ def main():
         print('\n')
         
         if short_code == 'cc':
-            print("Add user Name")
+            print("Sign Up")
             my_User_name = input()
             
             print('Your new Password?')
@@ -66,3 +66,21 @@ def main():
             
             print('Confrim your password')
             confirmed_password = input()
+            
+            # Checking whether the inputted password is the same as the confirmed password
+            
+            while my_password != confirmed_password:
+                print('Oops seem that the password did not match') 
+                my_password = input()
+                print('Confirm your password')
+                confirmed_password = input()
+        else:
+            print('You have succesfully created a new account')
+            print('\n')
+            print('Log in to your Account')
+            print('Username')
+            log_name = input()
+            print('password')
+            log_password = input()
+            
+             while    
