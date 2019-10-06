@@ -16,3 +16,10 @@ def save_credential(credentials):
     Function to save the new credential details created
     '''
     credentials.save_credential()
+    
+def find_credential(account_name):
+    '''
+    Function that finds credentials by account name
+    '''    
+    
+    return Credential.find_by_name(account_name)
