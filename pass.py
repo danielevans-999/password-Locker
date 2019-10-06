@@ -22,3 +22,5 @@ class Credential:
     class that creates new instances of credentials
     '''
     
+    credentials_list = []
+    
