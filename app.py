@@ -83,4 +83,12 @@ def main():
             print('password')
             log_password = input()
             
-             while    
+            # checking whether the inpputted details correspond to the sign up details
+            
+            while log_name != my_User_name or log_password != my_password:
+                 print('Wrong username or password')
+                 print("Username")
+                 log_name = input()
+                 print("Your Password")
+                 log_password = input()
+                     
