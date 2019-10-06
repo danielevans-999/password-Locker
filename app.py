@@ -29,3 +29,9 @@ def existing_credentials(name):
     Functiion that checks if an account really exists
     '''
     return Credential.credential_exists(name)
+
+def delete_credential(credentials):
+    '''
+    Function that deletes credentials that are no longer in use
+    '''
+    return credentials.delete_credential(credentials)
