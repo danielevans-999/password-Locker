@@ -54,3 +54,15 @@ def main():
     
     while True:
         print("Use this short codes:cc-Create New User, lgn-To login to your account,ex-to exit")
+        short_code = input().lower()
+        print('\n')
+        
+        if short_code == 'cc':
+            print("Add user Name")
+            my_User_name = input()
+            
+            print('Your new Password?')
+            my_password = input()
+            
+            print('Confrim your password')
+            confirmed_password = input()
