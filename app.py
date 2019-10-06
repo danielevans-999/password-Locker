@@ -23,3 +23,9 @@ def find_credential(account_name):
     '''    
     
     return Credential.find_by_name(account_name)
+
+def existing_credentials(name):
+    '''
+    Functiion that checks if an account really exists
+    '''
+    return Credential.credential_exists(name)
