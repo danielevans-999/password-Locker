@@ -73,3 +73,9 @@ class Credential:
                 return True
         return False    
                
+    @classmethod
+    def display_credentials(cls):
+        '''
+        Method which will display the credential list
+        '''
+        return cls.credential_exists            
