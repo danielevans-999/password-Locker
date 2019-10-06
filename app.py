@@ -35,3 +35,9 @@ def delete_credential(credentials):
     Function that deletes credentials that are no longer in use
     '''
     return credentials.delete_credential(credentials)
+
+def display_credential():
+    '''
+    Functiomn that displays all the saved credentials 
+    '''
+    Credential.display_credentials()
