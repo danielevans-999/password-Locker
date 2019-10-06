@@ -68,3 +68,8 @@ class Credential:
             Boolean: True or false depending if the object exists
         '''
         
+        for creds in cls.credentials_list:
+            if creds.account_name == acc_name:
+                return True
+        return False    
+               
