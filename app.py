@@ -51,3 +51,6 @@ def display_credential():
 def main():
     
     print('Hello There')
+    
+    while True:
+        print("Use this short codes:cc-Create New User, lgn-To login to your account,ex-to exit")
