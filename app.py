@@ -47,3 +47,7 @@ def display_credential():
     Functiomn that displays all the saved credentials 
     '''
     Credential.display_credentials()
+
+def main():
+    
+    print('Hello There')
