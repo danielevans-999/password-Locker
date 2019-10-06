@@ -43,5 +43,14 @@ class Credential:
         
         self.credentials_list.remove(self)
         
-        
+    @classmethod
+    def find_by_name(cls,acoount_name):
+        '''
+        Method that takes in account name and return credential object that matches that account name
+         
+         Args:
+              account name:accountname to search for
+        return:
+               credential of user that matches the account name      
+        '''    
         
