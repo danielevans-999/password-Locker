@@ -95,6 +95,49 @@ def main():
             else:
                 print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
                 print('\n')
+                
+                while True:
+                    print("1: View Your saved credentials")
+                    print("2: Add new credentials")
+                    print("3: Remove credentials")
+                    print("4: Search credentials")
+                    print("5: Log Out")
+                    selected = input()
+                    
+                    if selected == '2':
+                        while True:
+                            print('Do you want to continue? y/n')
+                            
+                            option = input().lower()
+                            if option == 'y':
+                                print('Enter Account Name')
+                                account_name = input()
+                                print('Enter password ')
+                                print("To Generate password  use 'gen' or to create your own use 'new'")
+                                decision = input().lower()
+                                if decision == 'gen':
+                                    account_password = random.randint(0,1000)
+                                    print(f"Account:{account_name}")
+                                    print(f"Password:{account_password}")
+                                    print('\n')
+                                elif decision == 'new':
+                                    print("Create password") 
+                                    print(f"Account:{account_name}")
+                                    print(f"Password:{account_password}")
+                                    print('\n')
+                                else:
+                                    print('Invalid Choice') 
+                                save_credential(create_credential(account_name,account_password))   
+                            elif option == 'n':
+                                break
+                            else:
+                                print("Invalid choice use y or n")         
+                    elif selected == '1':
+                        while True:
+                            print               
+                                      
+                    
+                    
             
                      
                      
