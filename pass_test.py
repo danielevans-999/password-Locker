@@ -19,3 +19,13 @@ class TestPassword(unittest.TestCase):
         
         self.new_user = User('daniel','123')
         self.new_credential = Credential('twiter','456')
+    
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run
+        '''   
+        
+        User.user_list = []
+        Credential.credentials_list =[]  
+    
+        
