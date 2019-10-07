@@ -63,13 +63,22 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(found_credential.account_password,'456')
         
     def test_credential_exists(self):
-        '''
+        '''test to check if we can return a boolean if we cannot  find the cridential
         test to check if we can return a boolean if we cannot  find the cridential
         '''     
         
         self.new_credential.save_credential()
         credential_exist = Credential.credential_exists("twiter")
         self.assertTrue(credential_exist)
+        
+    def test_delete_credential(self):
+        self.new_credential.save_credential()
+        test_credential = Credential("instagram","789") 
+        test_credential.save_credential()
+        
+        Credential.credentials_list.remove(test_credential)   
+        
+        self.assertEqual(len(Credential.credentials_list),1)
         
               
         
