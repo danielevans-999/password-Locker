@@ -38,6 +38,20 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_user.password, "123")
         self.assertEqual(self.new_credential.account_name, "twiter")
         self.assertEqual(self.new_credential.account_password, "456")
+        
+    def test_save_object(self):
+        '''
+        test_save_object test case to test if the 
+         objects are saved into 
+        the user list amd the credential list
+        '''    
+        
+        self.new_user.save_detail()
+        self.new_credential.save_credential()
+        
+        self.assertEqual(len(User.user_list),1)
+        self.assertEqual(len(Credential.credentials_list),1)
+        
 
 
 if __name__ == '__main__':
