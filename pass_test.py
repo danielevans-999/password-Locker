@@ -72,6 +72,9 @@ class TestPassword(unittest.TestCase):
         self.assertTrue(credential_exist)
         
     def test_delete_credential(self):
+        '''
+        Test case to check if the user can delete their credentials
+        '''
         self.new_credential.save_credential()
         test_credential = Credential("instagram","789") 
         test_credential.save_credential()
@@ -80,6 +83,12 @@ class TestPassword(unittest.TestCase):
         
         self.assertEqual(len(Credential.credentials_list),1)
         
+    def test_display_all_credential(self):
+        '''
+        method that return all the credential saved
+        '''    
+        
+        self.assertEqual(Credential.display_credentials(),Credential.credentials_list)
               
         
 
