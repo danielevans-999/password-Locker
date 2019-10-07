@@ -11,3 +11,11 @@ class TestPassword(unittest.TestCase):
         creating test cases
 
     ''' 
+    
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        
+        self.new_user = User('daniel','123')
+        self.new_credential = Credential('twiter','456')
