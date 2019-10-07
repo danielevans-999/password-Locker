@@ -28,11 +28,11 @@ def user_exist(name):
     return User.user_exists(name)
 
 
-def create_credential(name, password):
+def create_credential(acc, name, password):
     '''
     Function that create  new account and the credentials
     '''
-    new_credential = Credential(name, password)
+    new_credential = Credential(acc, name, password)
     return new_credential
 
 
@@ -112,6 +112,8 @@ def main():
                             if decision == 'y':
                                 print("Enter Account name")
                                 accname = input()
+                                print("Enter username")
+                                uname = input()
                                 print("Enter a password")
                                 print(
                                     "Do you want a computer generated password ? use 'gp' or 'new' to create your own ")
@@ -119,7 +121,7 @@ def main():
                                 if word == 'gp':
                                     accpass = random.randint(0, 1000)
                                     print(
-                                        f"Account:{accname} Password:{accpass}")
+                                        f"Account:{accname} Username: {uname} Password:{accpass}")
                                     print('\n')
                                 elif word == 'new':
                                     print("Create password")
@@ -130,7 +132,7 @@ def main():
                                 else:
                                     print("Invalid choice")
                                 save_credential(
-                                    create_credential(accname, accpass))
+                                    create_credential(accname, uname, accpass))
                             elif decision == 'n':
                                 break
                             else:
@@ -142,8 +144,9 @@ def main():
                             if display_credential():
 
                                 for creds in display_credential():
-                                    print(f"ACCOUNT NAME:{creds.account_name} PASSWORD:{creds.account_password}")
-                                    
+                                    print(
+                                        f"Account Name:{creds.account_name} Username: {creds.username} Password:{creds.account_password}")
+
                             else:
                                 print('\n')
                                 print(
@@ -280,6 +283,8 @@ def main():
                                 if decision == 'y':
                                     print("Enter Account name")
                                     accname = input()
+                                    print("Enter user name")
+                                    uname = input()
                                     print("Enter a password")
                                     print(
                                         "Do you want a computer generated password ? use 'gp' or 'new' to create your own ")
@@ -287,19 +292,19 @@ def main():
                                     if word == 'gp':
                                         accpass = random.randint(0, 1000)
                                         print(
-                                            f"Account:{accname} Password:{accpass}")
+                                            f"Account:{accname} username:{uname} Password:{accpass}")
                                         print(f"")
                                         print('\n')
                                     elif word == 'new':
                                         print("Create password")
                                         accpass = input()
                                         print(
-                                            f"Account:{accname} Password:{accpass}")
+                                            f"Account:{accname}  username:{uname} Password:{accpass}")
 
                                     else:
                                         print("Invalid choice")
                                     save_credential(
-                                        create_credential(accname, accpass))
+                                        create_credential(accname, uname, accpass))
                                 elif decision == 'n':
                                     break
                                 else:
@@ -312,9 +317,9 @@ def main():
 
                                     for creds in display_credential():
                                         print(
-                                            f"ACCOUNT NAME:{creds.account_name}")
+                                            f"****Account Name:{creds.account_name} username:{creds.username} Password:{creds.account_password}***")
                                         print(
-                                            f"PASSWORD:{creds.account_password}")
+                                            f"")
                                 else:
                                     print('\n')
                                     print(
@@ -362,9 +367,8 @@ def main():
                                     if existing_credentials(account):
                                         found = find_credential(account)
                                         print(
-                                            f"ACCOUNT NAME:{found.account_name}")
-                                        print(
-                                            f"PASSWORD {found.account_password}")
+                                            f"ACCOUNT NAME:{found.account_name} PASSWORD {found.account_password}")
+
                                     else:
                                         print("The account does not exist")
                                 elif proc == 'n':
