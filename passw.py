@@ -16,6 +16,12 @@ class User:
         '''    
         
         self.user_list.append(self)
+    @classmethod
+    def user_exists(cls,name):
+        for user in cls.user_list:
+            if user.user_name == name:
+                return True
+        return False
         
 class Credential:
     '''
