@@ -51,6 +51,18 @@ class TestPassword(unittest.TestCase):
         
         self.assertEqual(len(User.user_list),1)
         self.assertEqual(len(Credential.credentials_list),1)
+     
+    def test_find_user_by_name(self):
+        '''
+        test to check if we can find a user or credential by account name and display information
+        '''
+        
+        
+        self.new_credential.save_credential()
+        found_credential = Credential.find_by_name('twiter')
+        self.assertEqual(found_credential.account_password,'456')
+        
+              
         
 
 
