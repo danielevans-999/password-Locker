@@ -78,4 +78,4 @@ class Credential:
         '''
         Method which will display the credential list
         '''
-        return cls.credential_exists            
+        return cls.credentials_list           
