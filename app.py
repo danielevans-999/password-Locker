@@ -179,7 +179,7 @@ def main():
                                 elif done == "no":
                                     continue
                             else:
-                                print("Contact does not exist")
+                                print("Credentialz does not exist")
                                 break
                     elif selected == '4':
                         while True:
@@ -352,7 +352,7 @@ def main():
                                     elif done == "no":
                                         continue
                                 else:
-                                    print("Contact does not exist")
+                                    print("Credential does not exist")
                                     break
                         elif selected == '4':
                             while True:
