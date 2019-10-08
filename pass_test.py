@@ -19,7 +19,7 @@ class TestPassword(unittest.TestCase):
         '''
 
         self.new_user = User('daniel', '123')
-        self.new_credential = Credential('twiter', '456')
+        self.new_credential = Credential('twiter', 'daniel','456')
 
     def tearDown(self):
         '''
@@ -76,7 +76,7 @@ class TestPassword(unittest.TestCase):
         Test case to check if the user can delete their credentials
         '''
         self.new_credential.save_credential()
-        test_credential = Credential("instagram","789") 
+        test_credential = Credential("instagram",'daniel',"789") 
         test_credential.save_credential()
         
         Credential.credentials_list.remove(test_credential)   
