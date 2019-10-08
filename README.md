@@ -11,7 +11,7 @@ This is an application that allows on to save their credentials that they might 
 
  | Behaviour            | Input                  | Output                                             |
 | ------------------------    |:----------------------:| --------------------------------------------------:|
-| Login to the application    | Enter username and password |Display list to save,view,delete,search or exit   |
+| Login to the application    | Enter username and password |Display list to save,view,delete,search  credentials   |
 
 
 ## Installing 
@@ -24,7 +24,7 @@ To view the application go to [click here](https://github.com/danielevans-999/pa
 
 - step 3:Run the test file to confirm that all the test passes
 
--step 4:Run the main app to run the application to  use to save your credential.
+- step 4:Run the main app to run the application to  use to save your credential.
 
 # Technologies Used
 
