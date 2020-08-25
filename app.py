@@ -1,7 +1,6 @@
 
 #!
-from passw import User
-from passw import Credential
+from passw import User,Credential
 import random
 
 
